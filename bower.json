@@ -1,0 +1,31 @@
+{
+  "name": "SRDA",
+  "version": "0.0.0",
+  "authors": [
+    "JJ"
+  ],
+  "description": "SRDA 資料串連平台",
+  "main": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "jerry7722@hotmail.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "zepto": "^1.1.6",
+    "waypoints": "^4.0.0",
+    "enquire": "^2.1.2",
+    "gsap": "^1.18.2",
+    "js-signals": "signals#^1.0.0",
+    "requirejs": "^2.2.0",
+    "scrollreveal": "^3.1.4"
+  }
+}

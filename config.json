@@ -1,0 +1,89 @@
+{
+  "projectURL": "srda.localhost",
+  "browsersync": {
+    "server": "website"
+  },
+  "postcss": {
+    "src": "website/assets/css/style.css",
+    "build": "website/assets/css/"
+  },
+  "images": {
+    "src": "src/img/**/*",
+    "build": "website/assets/img/"
+  },
+  "html": {
+    "src": "website/**/*.html",
+    "build": "website/"
+  },
+  "pug": {
+    "src": "src/pug/*.pug",
+    "watch": "src/pug/**/*.pug",
+    "build": "website/"
+  },
+  "iconFont": {
+    "name": "custom-glyphs",
+    "types": [
+      "ttf",
+      "eot",
+      "woff",
+      "woff2",
+      "svg"
+    ],
+    "src": "src/iconfont/svg/**/*.svg",
+    "build": "website/assets/fonts/",
+    "templateInput": "src/iconfont/template/_icons.scss",
+    "templateOutput": "../../../../src/scss/modules/_icons.scss",
+    "templateFontpath": "../fonts/"
+  },
+  "tasks": {
+    "main": [
+      "html",
+      "images",
+      "scripts",
+      "styles"
+    ],
+    "default": [
+      "main",
+      "watch",
+      "browser-sync"
+    ],
+    "build": [
+      "main",
+      "html-build",
+      "scripts-build",
+      "styles-build",
+      "removeDevFiles",
+      "iconfont"
+    ]
+  },
+  "styles": {
+    "src": "src/scss/style.scss",
+    "src_files": "src/scss/**/*.scss",
+    "build_srcsmap": "website/assets/css/",
+    "build": "website/assets/css/",
+    "src_lib": "website/assets/css/**/*.css",
+    "build_lib": "website/assets/css/"
+  },
+  "scope": "#scope",
+  "prefix": "prfx-",
+  "browsers": "last 3 versions, > 1%",
+  "cssSortOrder": "smacss",
+  "modernizr": {
+    "output": "modernizr-custom.js",
+    "build": "website/assets/js/lib/",
+    "excludeTests": [],
+    "tests": [],
+    "options": [
+      "setClasses",
+      "addTest",
+      "testProp",
+      "fnBind"
+    ]
+  },
+  "scripts": {
+    "src": "coffee/js/**/*.coffee",
+    "build": "website/assets/js",
+    "src_lib": "website/assets/js/lib/**/*.js",
+    "build_lib": "website/assets/js/lib/"
+  }
+}
