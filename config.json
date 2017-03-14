@@ -64,7 +64,7 @@
     "src_lib": "website/assets/css/**/*.css",
     "build_lib": "website/assets/css/"
   },
-  "scope": "#scope",
+  "scope": "#srda",
   "prefix": "prfx-",
   "browsers": "last 3 versions, > 1%",
   "cssSortOrder": "smacss",

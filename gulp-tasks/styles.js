@@ -29,21 +29,21 @@ var postcssConfigDev = [
   rucksack,
   next({browsers: cfg.browsers}),
   grace,
-  classPrfx(cfg.prefix),
-  scopify(cfg.scope),
+  // classPrfx(cfg.prefix),
+  // scopify(cfg.scope),
   cssdeclsort({order: cfg.cssSortOrder}),
   mqKeyframes,
   mqPacker,
   autoprefixer({browsers: cfg.browsers}),
 ];
 
-var postcssConfigBuild = [ 
+var postcssConfigBuild = [
   gradientFix,
   rucksack,
   next({browsers: cfg.browsers}),
   grace,
-  classPrfx(cfg.prefix),
-  scopify(cfg.scope),
+  // classPrfx(cfg.prefix),
+  // scopify(cfg.scope),
   cssdeclsort({order: cfg.cssSortOrder}),
   mqKeyframes,
   mqPacker,
