@@ -1,0 +1,49 @@
+extends layouts/_default
+
+block content
+  .page-title
+    div
+      h1
+        i.icn.icn--dashboard
+        |  專案管理
+
+    div
+      ul.breadcrumb
+        li
+          i.icn.icn--home.fa-lg
+        li
+          a(href='#') MyData
+
+  .row
+    -for (var i = 1; i < 3; i++)
+      // list Item #{i}
+      .col-md-12.mb-20
+        .heading-title
+          | 專案名稱：
+          |
+          span 專案名稱
+          .pull-right
+            | 最後編輯時間：
+            |
+            span yyyy/mm/dd PM HH:MM
+        ul.list-group
+          li.list-group-item
+            .row
+              .col-md-7
+                | 變項數：
+                span #{i}
+              .col-md-5
+                a.pull-right(href='#')
+                  i.icn.icn--pencil
+                  |
+                  | 編輯專案名稱
+          li.list-group-item
+            .row
+              .col-md-7
+                | 下載次數：
+                span #{i}
+              .col-md-5
+                a.pull-right(href='#')
+                  i.icn.icn--pencil
+                  |
+                  | 編輯變項清單

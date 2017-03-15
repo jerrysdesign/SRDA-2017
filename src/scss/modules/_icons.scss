@@ -1,0 +1,139 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+
+$icn-check: "\E001";
+$icn-chevron-down: "\E002";
+$icn-circle-add: "\E003";
+$icn-circle-check: "\E004";
+$icn-circle-cross: "\E005";
+$icn-circle-question: "\E006";
+$icn-cross: "\E007";
+$icn-home: "\E008";
+$icn-layout: "\E009";
+$icn-menu: "\E00A";
+$icn-pencil: "\E00B";
+$icn-plus: "\E00C";
+$icn-search: "\E00D";
+$icn-shopping-cart: "\E00E";
+$icn-user: "\E00F";
+
+
+
+
+
+// ==========================================================================
+// Map
+// ==========================================================================
+
+$icons: (
+  check: "\E001",
+  chevron-down: "\E002",
+  circle-add: "\E003",
+  circle-check: "\E004",
+  circle-cross: "\E005",
+  circle-question: "\E006",
+  cross: "\E007",
+  home: "\E008",
+  layout: "\E009",
+  menu: "\E00A",
+  pencil: "\E00B",
+  plus: "\E00C",
+  search: "\E00D",
+  shopping-cart: "\E00E",
+  user: "\E00F",
+);
+
+
+
+
+// ==========================================================================
+// Extends
+// ==========================================================================
+
+%icn-base {
+  @extend %iconfont;
+  font-size: if(variable-exists(icn-font-size), $icn-font-size, 1em);
+  line-height: if(variable-exists(icn-line-height), $icn-line-height, 1);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  display: inline-block;
+  text-rendering: auto;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function icn-char($filename) {
+  @return map-get($icons, $filename);
+}
+
+.icn{
+  display: inline-block;
+  &:before {
+    @extend %icn-base;
+  }
+}
+
+.icn--fw {
+  width: if(variable-exists(icn-fixed-width-size), $icn-fixed-width-size, 1em);
+  text-align: center;
+}
+
+
+@mixin icn($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    content: icn-char($filename);
+  }
+}
+
+.icn--check {
+  @include icn(check);
+}
+.icn--chevron-down {
+  @include icn(chevron-down);
+}
+.icn--circle-add {
+  @include icn(circle-add);
+}
+.icn--circle-check {
+  @include icn(circle-check);
+}
+.icn--circle-cross {
+  @include icn(circle-cross);
+}
+.icn--circle-question {
+  @include icn(circle-question);
+}
+.icn--cross {
+  @include icn(cross);
+}
+.icn--home {
+  @include icn(home);
+}
+.icn--layout {
+  @include icn(layout);
+}
+.icn--menu {
+  @include icn(menu);
+}
+.icn--pencil {
+  @include icn(pencil);
+}
+.icn--plus {
+  @include icn(plus);
+}
+.icn--search {
+  @include icn(search);
+}
+.icn--shopping-cart {
+  @include icn(shopping-cart);
+}
+.icn--user {
+  @include icn(user);
+}
