@@ -5,19 +5,22 @@
 
 $icn-check: "\E001";
 $icn-chevron-down: "\E002";
-$icn-circle-add: "\E003";
-$icn-circle-check: "\E004";
-$icn-circle-cross: "\E005";
-$icn-circle-question: "\E006";
-$icn-cross: "\E007";
-$icn-home: "\E008";
-$icn-layout: "\E009";
-$icn-menu: "\E00A";
-$icn-pencil: "\E00B";
-$icn-plus: "\E00C";
-$icn-search: "\E00D";
-$icn-shopping-cart: "\E00E";
-$icn-user: "\E00F";
+$icn-chevron-right: "\E003";
+$icn-circle-add: "\E004";
+$icn-circle-check: "\E005";
+$icn-circle-cross: "\E006";
+$icn-circle-question: "\E007";
+$icn-cross: "\E008";
+$icn-home: "\E009";
+$icn-layout: "\E00A";
+$icn-list: "\E00B";
+$icn-menu: "\E00C";
+$icn-pencil: "\E00D";
+$icn-plus: "\E00E";
+$icn-search: "\E00F";
+$icn-shopping-cart: "\E010";
+$icn-user: "\E011";
+$icn-wrench: "\E012";
 
 
 
@@ -30,19 +33,22 @@ $icn-user: "\E00F";
 $icons: (
   check: "\E001",
   chevron-down: "\E002",
-  circle-add: "\E003",
-  circle-check: "\E004",
-  circle-cross: "\E005",
-  circle-question: "\E006",
-  cross: "\E007",
-  home: "\E008",
-  layout: "\E009",
-  menu: "\E00A",
-  pencil: "\E00B",
-  plus: "\E00C",
-  search: "\E00D",
-  shopping-cart: "\E00E",
-  user: "\E00F",
+  chevron-right: "\E003",
+  circle-add: "\E004",
+  circle-check: "\E005",
+  circle-cross: "\E006",
+  circle-question: "\E007",
+  cross: "\E008",
+  home: "\E009",
+  layout: "\E00A",
+  list: "\E00B",
+  menu: "\E00C",
+  pencil: "\E00D",
+  plus: "\E00E",
+  search: "\E00F",
+  shopping-cart: "\E010",
+  user: "\E011",
+  wrench: "\E012",
 );
 
 
@@ -98,6 +104,9 @@ $icons: (
 .icn--chevron-down {
   @include icn(chevron-down);
 }
+.icn--chevron-right {
+  @include icn(chevron-right);
+}
 .icn--circle-add {
   @include icn(circle-add);
 }
@@ -119,6 +128,9 @@ $icons: (
 .icn--layout {
   @include icn(layout);
 }
+.icn--list {
+  @include icn(list);
+}
 .icn--menu {
   @include icn(menu);
 }
@@ -136,4 +148,7 @@ $icons: (
 }
 .icn--user {
   @include icn(user);
+}
+.icn--wrench {
+  @include icn(wrench);
 }
