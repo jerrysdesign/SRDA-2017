@@ -73,15 +73,10 @@
     "build": "website/assets/js/lib/",
     "excludeTests": [],
     "tests": [],
-    "options": [
-      "setClasses",
-      "addTest",
-      "testProp",
-      "fnBind"
-    ]
+    "options": []
   },
   "scripts": {
-    "src": "coffee/js/**/*.coffee",
+    "src": "src/coffee/**/*.coffee",
     "build": "website/assets/js",
     "src_lib": "website/assets/js/lib/**/*.js",
     "build_lib": "website/assets/js/lib/"

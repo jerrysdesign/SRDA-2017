@@ -1,35 +1,16 @@
 include views/mixins/mixins
 
 block vars
-  - var lang                   = 'nl'
-  - var pageTitle             = 'pageTitle'
-  - var pageDescription       = 'Description'
-  - var bodyClass             = ''
-
-block socialMedia
-  - var useTwitterMetaTags     = false
-  - var useFacebookMetaTags    = false
-  - var twitterCard            = 'summary'
-  - var twitterHandler         = '@someone'
-  - var twitterTitle           = 'The Twitter Title'
-  - var twitterDescription     = 'The Twitter Description'
-  - var twitterImage           = 'Link To The Twitter Image'
-
-  - var facebookType           = 'website'
-  - var facebookTitle          = 'The Facebook Title'
-  - var facebookDescription    = 'The Facebook Description'
-  - var facebookImage          = 'Link To The Facebook Image'
-
-  - var socialURL              = 'http://www.theurl.com'
-
-block favicons
-  - var useAppleIcons          = false
-
-
+  - var lang            = 'zh-Hant-TW'
+  - var pageTitle       = 'SRDA'
+  - var pageDescription = 'Description'
+  - var bodyClass       = 'sidebar-mini fixed'
 
 doctype html
 
-html(id="srda" lang=lang class="no-js " + lang)
++html()
+
+html(lang=lang class="no-js")
 
   head
     meta(charset="utf-8")
@@ -37,50 +18,12 @@ html(id="srda" lang=lang class="no-js " + lang)
     title #{ pageTitle }
     meta(name="description", content=pageDescription)
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    //- meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, minimal-ui")
+    link(rel="icon", type="image/x-icon", href="assets/img/favicons/favicon.png")
+    link(rel="stylesheet", href="assets/css/style.css")
 
-    if useTwitterMetaTags
-      meta(name="twitter:card", content=twitterCard)
-      meta(name="twitter:site", content=twitterHandler)
-      meta(name="twitter:url", content=socialURL)
-      meta(name="twitter:title", content=twitterTitle)
-      meta(name="twitter:description", content=twitterDescription)
-      meta(name="twitter:image", content=twitterImage)
-
-    if useFacebookMetaTags
-      meta(property="og:type", content=facebookType)
-      meta(property="og:url", content=socialURL)
-      meta(property="og:title", content=facebookTitle)
-      meta(property="og:description", content=facebookDescription)
-      meta(property="og:image", content=facebookImage)
-
-    link(rel="icon", type="image/x-icon", href="assets/img/favicons/favicon.ico")
-
-
-    if useTouchIcons
-      link(rel="apple-touch-icon", href="assets/img/favicons/touch-icon-precomposed.png")
-
-
-    block headerStyles
-      != '\n    <!-- build:css -->'
-      link(rel="stylesheet", href="assets/css/style.css")
-      != '\n    <!-- endbuild -->'
-
-    block headerScripts
-      != '\n    <!-- inject:head:js -->'
-      != '\n    <!-- endinject -->'
-
-  body
+  body(class=bodyClass)
     block contentMain
 
-
-
-    != '\n'
-
-    block footerScripts
-      != '\n\n    <!-- inject:head:js -->'
-      != '\n\n    <!-- endinject -->'
-      != '\n\n    <!-- build:js -->'
-      script(src="assets/js/script.js")
-      != '\n    <!-- endbuild -->\n'
-      script(src="assets/js/script.js")
+    script(src='assets/js/lib/jquery.min.js')
+    script(src='assets/js/script.js')
+    script(src='assets/js/lib/bootstrap.min.js')

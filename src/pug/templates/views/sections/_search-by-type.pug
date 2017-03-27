@@ -1,0 +1,92 @@
+.col-md-9
+  //- .row
+  //-   .search-linebar
+  //-     .form-group.col-md-2
+  //-       label.control-label 主題搜尋
+  //-     form.form-inline.col-sm-10
+  //-       .form-group
+  //-         label.sr-only serach
+  //-         .input-group
+  //-           .input-group-addon
+  //-             i.icn.icn--search
+  //-           input.form-control(type='text')
+  //-           .input-group-addon
+  //-             i.icn.icn--circle-add
+  //-       button.btn.btn-primary(type='submit') 查詢
+
+  form.select2-component
+    .search-linebar
+      .form-group.col-md-2
+        label.control-label 主題搜尋
+
+      .form-group.col-sm-8.has-feedback#select2
+        .input-group
+          .input-group-addon
+            span(class="icn icn--search")
+          input.form-control(type='search', placeholder='')
+          span(class="icn icn--circle-add addon")
+        .subject
+          .card-title
+            input(type='text', class='col-md-12 form-control', placeholder='輸入主題文字')
+          .card-body
+            .row
+              -for (var i = 1; i < 99; i++)
+                .col-md-4.checkbox
+                  label.mr-10
+                    input(type="checkbox" id="" value="")
+                    | 複選項目[#{i}]
+
+          .subject-footer
+            .row
+              .pull-right
+                a(href='javascript:;', class='check-all')
+                  i.icn.icn--circle-check
+                  | 選擇全部
+                a(href='javascript:;', class='remove-all')
+                  i.icn.icn--circle-cross
+                  | 清除全部
+    .form-group.col-md-2
+      .row
+        button.btn.btn-primary.icon-btn(type='button') 查詢
+.col-md-3
+  .form-inline.pull-right
+    .form-group
+      .dropdown
+        span#selected(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          i.icn.icn-lg.icn--shopping-cart
+          | #
+        .dropdown-menu(aria-labelledby='selected', class='selected-list')
+          - var list = 1
+          table.table
+            thead
+              th
+                | 已選變項
+                span (#{list})
+              th.text-right
+                a(href='javascript:;')
+                  i.icn.icn--cross
+                  | 清除全部
+            tbody
+
+              -for (var list = 1; list < 4; list++)
+                tr
+                  td
+                    a(href='javascript:;') option #{list}
+                  td.text-center
+                    a(href='javascript:;')
+                      i.icn.icn--cross
+      //- <div class="dropdown">
+      //-   <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      //-     Dropdown trigger
+      //-     <span class="caret"></span>
+      //-   </button>
+      //-   <ul class="dropdown-menu" aria-labelledby="dLabel">
+      //-     ...
+      //-   </ul>
+      //- </div>
+      //- i.icn.icn-lg.icn--shopping-cart
+      //- span #
+
+
+    .form-group
+      span 已選變項

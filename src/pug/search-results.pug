@@ -1,83 +1,101 @@
-extends layouts/_search
+extends templates/layout
 
-block content
-  .page-title
-    // 搜尋分類
-    include modules/_search-by-type.pug
 
-  .row
-    .col-md-12
-      .card
-        .search-controls
-          .text-muted.pull-left
-            form.form-inline
-              form-group
-                label 每頁顯示
-                input(type='text')
-                span 筆
-              form-group
-                label 共
-                span #
-                span 筆
-          .clearfix
+//- Variables
+block append vars
+  - var lang            = 'zh-Hant-TW'
+  - var pageTitle       = 'SRDA | 搜尋結果'
+  - var pageDescription = 'Description'
+  - var bodyClass       = 'sidebar-mini fixed'
 
-          //- .animated-checkbox
-          //-   label
-          //-     input(type="checkbox")
-          //-     span.label-text
 
-          //- .btn-group
-          //-   button.btn.btn-primary.btn-sm(type='button')
-          //-     i.icn.icn--trash-o
-          //-   button.btn.btn-primary.btn-sm(type='button')
-          //-     i.icn.icn--reply
-          //-   button.btn.btn-primary.btn-sm(type='button')
-          //-     i.icn.icn--share
-          //-   button.btn.btn-primary.btn-sm(type='button')
-          //-     i.icn.icn--refresh
-        .search-results
-          .table-responsive.search-messages
-            table.table.table-striped.table-hover
-              thead
-                tr
-                  th
-                    .animated-checkbox
-                      label
-                        input(type="checkbox")
-                        span.label-text  全選
-                  th 變項名稱
-                  th 變項說明
-                  th 選項
-                  th 類型
-                  th 西元年
-              tbody
-                -for (var i = 1; i <10; i++)
-                  tr
-                    td
-                      .animated-checkbox
-                        label
-                          input(type="checkbox")
-                    td
-                      a(href='dedail-view') 變項名稱 #{i}
-                    td.search-subject
-                      | 變項說明 #{i}
-                    td
-                      ol
-                        li 選項 #{i}
-                        li 選項 #{i}
-                        li 選項 #{i}
-                    td
-                      | 類型 #{i}
-                    td ... #{i}
+block contentMain
+  //- Navbar
+  include templates/views/sections/_header
+  //- Side-Nav
+  include templates/views/sections/_sidebar-by_filter
 
-          .text-muted.pull-left
-            form.form-inline
-              form-group
-                label 每頁顯示
-                input(type='text')
-                span 筆
-              form-group
-                label 共
-                span #
-                span 筆
-          .clearfix
+  main.wrapper
+
+    .content-wrapper
+
+      .page-title
+        // 搜尋分類
+        include templates/views/sections/_search-by-type
+
+      .row
+        .col-md-12
+          .card
+            .search-controls
+              .text-muted.pull-left
+                form.form-inline
+                  form-group
+                    label 每頁顯示
+                    input(type='text')
+                    span 筆
+                  form-group
+                    label 共
+                    span #
+                    span 筆
+              .clearfix
+
+              //- .animated-checkbox
+              //-   label
+              //-     input(type="checkbox")
+              //-     span.label-text
+
+              //- .btn-group
+              //-   button.btn.btn-primary.btn-sm(type='button')
+              //-     i.icn.icn--trash-o
+              //-   button.btn.btn-primary.btn-sm(type='button')
+              //-     i.icn.icn--reply
+              //-   button.btn.btn-primary.btn-sm(type='button')
+              //-     i.icn.icn--share
+              //-   button.btn.btn-primary.btn-sm(type='button')
+              //-     i.icn.icn--refresh
+            .search-results
+              .table-responsive.search-messages
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th
+                        .animated-checkbox
+                          label
+                            input(type="checkbox")
+                            span.label-text  全選
+                      th 變項名稱
+                      th 變項說明
+                      th 選項
+                      th 類型
+                      th 西元年
+                  tbody
+                    -for (var i = 1; i <10; i++)
+                      tr
+                        td
+                          .animated-checkbox
+                            label
+                              input(type="checkbox")
+                        td
+                          a(href='dedail-view') 變項名稱 #{i}
+                        td.search-subject
+                          | 變項說明 #{i}
+                        td
+                          ol
+                            li 選項 #{i}
+                            li 選項 #{i}
+                            li 選項 #{i}
+                        td
+                          | 類型 #{i}
+                        td ... #{i}
+
+              .text-muted.pull-left
+                form.form-inline
+                  form-group
+                    label 每頁顯示
+                    input(type='text')
+                    span 筆
+                  form-group
+                    label 共
+                    span #
+                    span 筆
+              .clearfix

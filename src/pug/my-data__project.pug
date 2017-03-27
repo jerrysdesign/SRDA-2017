@@ -1,80 +1,97 @@
-extends layouts/_default
+extends templates/layout
 
-block content
-  .page-title
-    div
-      h1
-        i.icn.icn--dashboard
-        |  Dashboard
 
-    div
-      ul.breadcrumb
-        li
-          i.icn.icn--home.fa-lg
-        li
-          a(href='#') Dashboard
-  .row
-    .col-md-12
-      .card
-        .row
-          .col-md-12
-            .heading-title
-              | 選擇下載變項
-        .row
-          .col-md-7
-            ul.list-group
-              - for(var i = 0; i < 5; i++)
-                li.list-group-item
-                  label
-                    input(type='checkbox')
-                    |
-                    | Check-item #{i}
-            .pull-right
-              a.btn.btn-primary(href='#') 下一步
+//- Variables
+block append vars
+  - var lang            = 'zh-Hant-TW'
+  - var pageTitle       = 'SRDA | '
+  - var pageDescription = 'Description'
+  - var bodyClass       = 'sidebar-mini fixed'
 
-          .col-md-5
-            .pull-right
-              a.btn.btn-default(href='#')
-                i.icn.icn--pencil
-                |
-                | 選擇全部
-              br
-              a.btn.btn-default(href='#')
-                i.icn.icn--pencil
-                |
-                | 重新選擇
-              br
-              a.btn.btn-danger(href='#')
-                i.icn.icn--times-circle
-                |
-                | 全部清除
 
-    .col-md-12
-      .card
-        .row
-          .col-md-12
-            .heading-title
-              | 選擇下載檔案
-        .row
-          .col-md-12
-            table.table.table-striped
-              tr
-                th 過錄編碼簿
-                td ...
-              tr
-                th 資料庫
-                td ...
-              tr
-                th 原始資料
-                td ...
-              tr
-                th 欄位定義程式
-                td ...
-              tr
-                th 該年資加權說明
-                td ...
-            .pull-right
-              a.btn.btn-default(href='#')
-                | 重新選擇變項
-              a.btn.btn-primary(href='#')
-                | 下載
+block contentMain
+  //- Navbar
+  include templates/views/sections/_header
+  //- Side-Nav
+  include templates/views/sections/_sidebar
+
+  main.wrapper.my-data
+
+    .content-wrapper
+
+      .page-title
+        div
+          h1
+            i.icn.icn--dashboard
+            |  我的專案
+
+        div
+          ul.breadcrumb
+            li
+              i.icn.icn--home.fa-lg
+            li
+              a(href='#') 首頁
+      .row
+        .col-md-12
+          .card
+            .row
+              .col-md-12
+                .heading-title
+                  | 選擇下載變項
+            .row
+              .col-md-7
+                ul.list-group
+                  - for(var i = 0; i < 5; i++)
+                    li.list-group-item
+                      label
+                        input(type='checkbox')
+                        |
+                        | Check-item #{i}
+                .pull-right
+                  a.btn.btn-primary(href='#') 下一步
+
+              .col-md-5
+                .pull-right
+                  div(class='btn-group-vertical' role='group')
+                    a.btn.btn-default(href='#')
+                      i.icn.icn--pencil
+                      |
+                      | 選擇全部
+                    a.btn.btn-default(href='#')
+                      i.icn.icn--pencil
+                      |
+                      | 重新選擇
+                    a.btn.btn-danger(href='#')
+                      i.icn.icn--cross
+                      |
+                      | 全部清除
+
+        .col-md-12
+          .card
+            .row
+              .col-md-12
+                .heading-title
+                  | 選擇下載檔案
+            .row
+              .col-md-12
+                table.table.table-striped
+                  tr
+                    th 過錄編碼簿
+                    td ...
+                  tr
+                    th 資料庫
+                    td ...
+                  tr
+                    th 原始資料
+                    td ...
+                  tr
+                    th 欄位定義程式
+                    td ...
+                  tr
+                    th 該年資加權說明
+                    td ...
+                .pull-right
+                  a.btn.btn-default(href='#')
+                    | 重新選擇變項
+                  a.btn.btn-primary(href='#')
+                    | 下載

@@ -10,6 +10,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "breakpoint-sass": "^2.7.0",
+    "bootstrap-sass": "~3.3.7",
     "browser-sync": "^2.11.1",
     "css-declaration-sorter": "^1.2.1",
     "css-mqpacker": "^4.0.0",
@@ -50,8 +51,5 @@
     "rucksack-css": "^0.8.5",
     "superlatief-colors": "*",
     "susy": "^2.2.12"
-  },
-  "dependencies": {
-    "bootstrap-sass": "~3.3.7"
   }
 }

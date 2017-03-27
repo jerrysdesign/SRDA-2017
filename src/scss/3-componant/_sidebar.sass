@@ -65,7 +65,8 @@
       margin-right: 5px
   li
     > a >
-      .icn-chevron-right, .icn-plus
+      .icn--chevron-right,
+      .icn--plus
         width: auto
         height: auto
         position: absolute
@@ -75,10 +76,11 @@
         margin-right: 10px
         margin-top: 3px
         transition: all 0.3s ease
-    &.active >
-      a > .icn-chevron-right
-        transform: rotate(90deg)
-        transform-origin: center
+    &.active
+      > a >
+        .icn--chevron-right
+          transform: rotate(90deg)
+          transform-origin: center
       .treeview-menu
         display: block
   .treeview-menu
@@ -97,9 +99,10 @@
         display: block
         font-size: 14px
         position: relative
-        >
-          .icn-chevron-left, .icn-chevron-down
-            width: auto
+        > .icn--chevron-left
+          width: auto
+        > .icn-chevron-down
+          width: auto
         >
           i
             &:first-of-type

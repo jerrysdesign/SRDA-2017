@@ -9,7 +9,7 @@ var htmlreplace     = require('gulp-html-replace');
 var inject          = require('gulp-inject');
 
 var pugOptions = {
-  // pretty: true
+  pretty: true
 };
 
 // Compile jade files
@@ -26,7 +26,7 @@ gulp.task('html', ['moveBower'], function(){
 gulp.task('html-build', ['moveBower'], function(){
   gulp.src(cfg.pug.src)
     .pipe(plumber({errorHandler: notify.onError(cfg.error)}))
-    .pipe(pug(jadeOptions))
+    .pipe(pug(pugOptions))
     .pipe(inject(gulp.src(cfg.scripts.build_lib + 'modernizr-custom.js', {read: false}), {starttag: '<!-- inject:head:{{ext}} -->', relative: true}))
     .pipe(inject(gulp.src([cfg.scripts.build_lib + '**/*.js', '!' + cfg.scripts.build_lib + 'modernizr-custom.js'], {read: false}), {relative: true}))
     .pipe(htmlreplace({

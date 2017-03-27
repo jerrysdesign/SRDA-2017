@@ -1,0 +1,66 @@
+// Componant: Search Subject
+#select2
+  position: relative
+
+.search-linebar
+  .input-group-addon
+    background-color: transparent
+    // padding: 0
+    // line-height: 30px
+    // height: 30px
+  // @extend .form-inline
+.select2-component
+  .subject
+    width: 700px
+    background: #fff
+    border: 1px solid $color-gray-light
+    border-radius: 4px
+    position: absolute
+    top: 32px
+    left: 15px
+    background: $color-gray-lightest;
+    .checkbox,
+    .checkbox + .checkbox
+      margin-top: 5px
+      margin-bottom: 5px
+  .has-feedback
+    position: relative
+  .addon
+    position: absolute
+    right: 15px
+    top: 7px
+    z-index: 3
+    &:hover
+      cursor: pointer
+  .card-title
+    border-bottom: 1px solid $color-gray-light
+    padding: 10px
+    @include clearfix
+  .card-body
+    padding: 15px
+    height: 350px
+    overflow-y: scroll
+    overflow-x: hidden
+  .form-control-feedback
+    margin-top: 4px
+
+.subject-footer
+  border-top: 1px solid $color-gray-light
+  padding: 10px 25px
+  .check-all,
+  .remove-all
+    padding: 5px 25px
+    // margin: 0 10px
+  .check-all
+    & + .remove-all
+      border-left: 1px solid $color-gray
+
+#selected
+  padding: 5px
+  cursor: pointer
+.selected-list
+  width: 200px
+  // reset bootstrap
+  left: auto
+  right: 0
+

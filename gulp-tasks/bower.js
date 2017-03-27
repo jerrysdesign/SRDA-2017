@@ -10,7 +10,7 @@ gulp.task('moveBower', function(){
   var files = mainBowerFiles({
     base: '../bower_components',
     debugging: true,
-    overrides: { 
+    overrides: {
       'jquery': { main: 'dist/jquery.min.js' },
       'zepto': { main: 'zepto.min.js' },
       'require': { main: 'require.js' },
@@ -19,6 +19,8 @@ gulp.task('moveBower', function(){
       'enquire': { main: 'dist/enquire.min.js' },
       'gsap': { main: 'src/minified/TweenMax.min.js' },
       'scrollreveal': { main: 'dist/scrollreveal.min.js' },
+      'require': { main: 'require.js' },
+      'bootstrap-sass': { main: 'assets/javascripts/bootstrap.min.js' },
     }
   });
 

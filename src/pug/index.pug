@@ -3,43 +3,49 @@ extends templates/layout
 
 //- Variables
 block append vars
-  - var lang                  = 'zh-Hant-TW'
-  - var pageTitle             = '| pageTitle'
-  - var pageDescription       = 'Description'
-  - var bodyClass             = ''
+  - var lang            = 'zh-Hant-TW'
+  - var pageTitle       = 'SRDA | 首頁'
+  - var pageDescription = 'Description'
+  - var bodyClass       = 'sidebar-mini fixed'
 
 
 block contentMain
-  //- include templates/views/sections/header
-  //- include tools/kitchensink
-  //- include templates/views/sections/footer
-  .page-title
-    div
-      h1 Welcom
+  //- Navbar
+  include templates/views/sections/_header
+  //- Side-Nav
+  include templates/views/sections/_sidebar-by_filter
 
-    div
-      ul.breadcrumb
-        li
-          i.icn.icn--home.fa-lg
-        li
-          a(href='#') 首頁
+  main.wrapper
 
-  .row
-    .col-md-12
-      a(href='index2.html')
-        | SRDA 資料串連平台
-        br
-        | DATA EXPLORER
-      a(href='search.html') 資料查詢
-      br
-      a(href='#') 操作說明
-      br
-      a(href='#') 相關資源
-      br
-      a(href='my-data.html') MyData
-      br
-      a(href='help.html') Help
-      br
-      a(href='my-data__project.html') My Data Project
-      br
-      a(href='my-data__project-admin.html') My Data Project Admin
+    .content-wrapper
+
+      .page-title
+        div
+          h1 Welcom
+
+        div
+          ul.breadcrumb
+            li
+              i.icn.icn--home.fa-lg
+            li
+              a(href='#') 首頁
+
+      .row
+        .col-md-12
+          a(href='index2.html')
+            | SRDA 資料串連平台
+            br
+            | DATA EXPLORER
+          a(href='search.html') 資料查詢
+          br
+          a(href='#') 操作說明
+          br
+          a(href='#') 相關資源
+          br
+          a(href='my-data.html') MyData
+          br
+          a(href='help.html') Help
+          br
+          a(href='my-data__project.html') My Data Project
+          br
+          a(href='my-data__project-admin.html') My Data Project Admin
