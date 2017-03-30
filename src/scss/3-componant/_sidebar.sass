@@ -6,8 +6,8 @@
   left: 0
   padding-top: 50px
   min-height: 100vh
-  width: 230px
-  z-index: 810
+  width: $sidebar-width
+  z-index: $zindx-page-aside
   box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2)
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out
 
@@ -20,7 +20,7 @@
 @media (max-width: 767px)
   .main-sidebar
     padding-top: 100px
-    transform: translate(-230px, 0)
+    transform: translate(($sidebar-width * -1), 0)
   .sidebar-open
     .main-sidebar
       transform: translate(0, 0)
@@ -28,25 +28,26 @@
 @media (min-width: 768px)
   .sidebar-collapse
     .main-sidebar
-      transform: translate(-230px, 0)
+      transform: translate(($sidebar-width * -1), 0)
 
 .sidebar
   padding-bottom: 10px
   .header,
   .search-title
-    color: #fff
     white-space: nowrap
     overflow: hidden
   .header
     padding: 10px 25px 10px 15px
   .search-title
     padding: 10px
+    overflow: visible
 .sidebar-menu
   list-style: none
   margin: 0
   padding: 0
   white-space: nowrap
   overflow: hidden
+  color: #fff
   &:hover
     overflow: visible
   > li
@@ -107,9 +108,48 @@
           i
             &:first-of-type
               margin-right:  5px
+.search-question-wrapper
+  display: inline-block
 .search-question
   color: #ddd
-  padding: 10px
   margin-left: 5px
+  color: #fff
+  cursor: pointer
   &:hover
     color: #fff
+  &__tip-wrapper
+    width: 300px
+    margin: 0
+    padding: 0
+    // left: -117px
+    top: 32px
+    overflow: hidden
+
+    // tip content
+    .title
+      background-color: $color-gray-lighter
+      padding: 10px
+      padding-bottom: 5px
+      overflow: hidden
+      .row1
+        padding-bottom: 5px
+      .dt
+      .dd
+        margin-left: 8rem
+    .body
+      padding: 10px
+      padding-top: 5px
+    dl
+      margin-bottom: 0
+    dt,
+    dd
+      padding: 2px 5px
+    dt
+      float: left
+      width: 8rem
+      border-right: 1px solid $color-gray-light
+      font-weight: normal
+
+    dd
+      margin-left: 8.5rem
+      .td

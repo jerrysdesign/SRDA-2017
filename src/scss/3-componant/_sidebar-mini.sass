@@ -5,11 +5,12 @@
     &.sidebar-collapse
       .content-wrapper, .main-footer
         margin-left: 0px !important
-        z-index: 840
+        z-index: $zindx-page-main
       .main-sidebar
-        width: 0px !important
-        transform: translate(0, 0)
-        z-index: 850
+        width: $sidebar-width !important
+        transform: translate(($sidebar-width * -1), 0)
+        box-shadow: 0px 8px 17px rgba(0, 0, 0, 0)
+        z-index: $zindx-page-aside
         overflow: hidden
       .sidebar-menu > li
         position: relative

@@ -166,7 +166,7 @@ input[type="checkbox"]
     color: $btn-default-color
     text-decoration: none
     transform: translate3d(0, -1px, 0)
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4)
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.4)
     outline: none
   &.disabled,
   &[disabled],
@@ -180,6 +180,9 @@ input[type="checkbox"]
       margin-right: 5px
   &.btn-flat
     border-radius: 0
+
+.btn-primary:hover
+  color: #fff
 
 .btn-xs
   @include button-size(5px, 5px, $font-size-small, $line-height-small, $btn-border-radius-small)

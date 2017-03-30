@@ -7,9 +7,34 @@ aside.main-sidebar.hidden-print
       //- | &nbsp;關鍵字&nbsp;
       .form-inline
         input(type='text', class='form-control', placeholder='輸入關鍵字')
-        a.search-question(href='javascript:;')
-          i.icn.icn--circle-question
+        //- a.search-question(href='javascript:;')
+        //-   i.icn.icn--circle-question
+        .dropdown.search-question-wrapper
+          a(id='searhQuestion', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', class='search-question')
+            i.icn.icn--circle-question
+          .dropdown-menu(aria-labelledby='searhQuestion', class='search-question__tip-wrapper')
+            .search-question__tip
+              .title
+                .row1
+                  .icn.icn-circle-question
+                  | 關鍵字搜尋說明
+                .pull-left
+                  span.dt 關鍵字
+                  span.dd 搜尋說明
+                .pull-right
+                  i.icn.icn--cross
 
+              .body
+                dl
+                  -for (var i = 1; i < 10; i++)
+                    dt lorem
+                    dd
+                      .td
+                        a(href='javascript:;') lorem #{i}
+                        |、
+                        a(href='javascript:;') lorem #{i}
+                        |、
+                        a(href='javascript:;') lorem #{i}
     form.form-horizontal(style="padding: 10px")
       .card
         .card-title 計畫叢集

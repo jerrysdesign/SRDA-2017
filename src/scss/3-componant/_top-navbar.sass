@@ -3,7 +3,7 @@
 .main-header
   position: relative
   max-height: 100px
-  z-index: 1030
+  z-index: $zindx-page-header
   .logo
     display: block
     height: 50px
@@ -31,7 +31,7 @@
   > .navbar
     position: relative
     margin-bottom: 0
-    margin-left: 230px
+    margin-left: $sidebar-width
     border: none
     max-height: 50px
     border-radius: 0
@@ -59,7 +59,7 @@
         text-transform: uppercase
     .help-menu
       .dropdown-menu
-        min-width: 230px
+        min-width: $sidebar-width
         i
           width: auto
         .fa-stack

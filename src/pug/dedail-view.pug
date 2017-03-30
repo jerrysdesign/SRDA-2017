@@ -4,7 +4,7 @@ extends templates/layout
 //- Variables
 block append vars
   - var lang            = 'zh-Hant-TW'
-  - var pageTitle       = 'SRDA | '
+  - var pageTitle       = 'SRDA | 變項資訊'
   - var pageDescription = 'Description'
   - var bodyClass       = 'sidebar-mini fixed'
 
@@ -30,6 +30,8 @@ block contentMain
           ul.breadcrumb
             li
               i.icn.icn--home.fa-lg
+              | &nbsp;
+              a(href='#') 首頁
             li
               a(href='#') 變項資訊
 

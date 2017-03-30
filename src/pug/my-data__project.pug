@@ -4,7 +4,7 @@ extends templates/layout
 //- Variables
 block append vars
   - var lang            = 'zh-Hant-TW'
-  - var pageTitle       = 'SRDA | '
+  - var pageTitle       = 'SRDA | 專案列表'
   - var pageDescription = 'Description'
   - var bodyClass       = 'sidebar-mini fixed'
 
@@ -23,14 +23,16 @@ block contentMain
         div
           h1
             i.icn.icn--dashboard
-            |  我的專案
+            |  專案列表
 
         div
           ul.breadcrumb
             li
               i.icn.icn--home.fa-lg
+              | &nbsp;
+              a(href='./') 首頁
             li
-              a(href='#') 首頁
+              a(href='my-data.html') MyData
       .row
         .col-md-12
           .card
@@ -90,7 +92,8 @@ block contentMain
                   tr
                     th 該年資加權說明
                     td ...
-                .pull-right
+              .col-md-12
+                .pull-right.btn-horizontal
                   a.btn.btn-default(href='#')
                     | 重新選擇變項
                   a.btn.btn-primary(href='#')
