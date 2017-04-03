@@ -58,7 +58,7 @@
   },
   "styles": {
     "src": "src/scss/style.scss",
-    "src_files": "src/scss/**/*.scss",
+    "src_files": "src/scss/**/*",
     "build_srcsmap": "website/assets/css/",
     "build": "website/assets/css/",
     "src_lib": "website/assets/css/**/*.css",
