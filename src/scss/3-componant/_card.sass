@@ -31,6 +31,10 @@
   .card-title
     margin-top: 0
     margin-bottom: 20px
+    & + .card-body
+      border-top: 1px solid $color-gray-light
+    .main-sidebar &
+      margin-bottom: 10px
 
   .card-title-w-btn
     display: flex
@@ -47,7 +51,21 @@
       margin-bottom: 0
       padding-left: 0
 
+  .card-body
+    & + .card-footer
+      border-top: 1px solid $color-gray-light
+
   .card-footer
-    border-top: 1px solid #ddd
     padding: 20px 0 0 0
     margin-top: 10px
+    .main-sidebar &
+      padding-top: 10px
+
+
+.card
+  .main-sidebar &
+    margin-bottom: 0
+    padding: 15px
+    & + .card
+      margin-top: 10px
+

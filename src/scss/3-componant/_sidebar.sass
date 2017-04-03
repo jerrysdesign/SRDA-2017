@@ -11,11 +11,6 @@
   box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2)
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out
 
-  .card
-    margin-bottom: 0
-    & + .card
-      margin-top: 10px
-
 
 @media (max-width: 767px)
   .main-sidebar
@@ -153,3 +148,19 @@
     dd
       margin-left: 8.5rem
       .td
+
+
+// 選擇叢集
+.cluster
+  .checked-all
+    label
+      font-weight: bold
+    margin-bottom: 5px
+  ul, li
+    list-style: none
+    margin: 0
+    padding: 0
+  ul
+    padding-left: 20px
+
+

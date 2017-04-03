@@ -12,6 +12,7 @@ aside.main-sidebar.hidden-print
         .dropdown.search-question-wrapper
           a(id='searhQuestion', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', class='search-question')
             i.icn.icn--circle-question
+          // 關鍵字搜尋說明
           .dropdown-menu(aria-labelledby='searhQuestion', class='search-question__tip-wrapper')
             .search-question__tip
               .title
@@ -35,51 +36,53 @@ aside.main-sidebar.hidden-print
                         a(href='javascript:;') lorem #{i}
                         |、
                         a(href='javascript:;') lorem #{i}
-    form.form-horizontal(style="padding: 10px")
-      .card
+          // 關鍵字搜尋說明
+    form.form-horizontal(style='padding: 10px')
+      .card.cluster
         .card-title 計畫叢集
         .card-body
           .row
             .col-md-12.checkbox
-              label.mr-10
-                input(type="checkbox" id="" value="")
-                | 複選項目
-              label.mr-10
-                input(type="checkbox" id="" value="")
-                | 複選項目
-              label.mr-10
-                input(type="checkbox" id="" value="")
-                | 複選項目
-              label.mr-10
-                input(type="checkbox" id="" value="")
-                | 複選項目
+              .checked-all
+                label.mr-10
+                  input(type="checkbox" id="" value="")
+                  | 項目
+              ul
+                -for (var i = 1; i < 10; i++)
+                  li
+                    label.mr-10
+                      input(type="checkbox" id="" value="")
+                      | 複選項目
         .card-footer
+          button.btn(type="button" class="btn btn-default") 更多...
       .card
-        .card-title 依「西元」：
+        .card-title
+          | 依「西元」: 篩選
+          span #
         .card-body
         .card-footer
-          button(type="button" class="btn btn-default") 個別年度篩選
+          button(type='button' class='btn btn-default') 個別年度篩選
       //- .card
       //-   .card-title 類型
       //-   .card-body
       //-     .row
       //-       .col-xs-6.checkbox
       //-         label
-      //-           input(type="checkbox" id="inlineCheckbox1" value="option1")
+      //-           input(type='checkbox' id='inlineCheckbox1' value='option1')
       //-           | 單選
       //-         label
-      //-           input(type="checkbox" id="inlineCheckbox1" value="option1")
+      //-           input(type='checkbox' id='inlineCheckbox1' value='option1')
       //-           | 複選
       //-       .col-xs-6.checkbox
       //-         label
-      //-           input(type="checkbox" id="inlineCheckbox1" value="option1")
+      //-           input(type='checkbox' id='inlineCheckbox1' value='option1')
       //-           | 題組
       //-         label
-      //-           input(type="checkbox" id="inlineCheckbox1" value="option1")
+      //-           input(type='checkbox' id='inlineCheckbox1' value='option1')
       //-           | 文字題
 
     .pl-10.pr-10
-      button(type="button" class="btn btn-default") 清除全部
-      button(type="button" class="btn btn-primary") 查詢
+      button(type='button' class='btn btn-default') 清除全部
+      button(type='button' class='btn btn-primary') 查詢
 
 
