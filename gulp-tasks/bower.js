@@ -14,7 +14,7 @@ gulp.task('moveBower', function(){
       'jquery': { main: 'dist/jquery.min.js' },
       'jquery-ui': { main: 'jquery-ui.min.js' },
       'require': { main: 'require.js' },
-      'bootstrap-sass': { main: 'assets/javascripts/bootstrap.min.js' },
+      'bootstrap-sass': { main: 'assets/javascripts/bootstrap.min.js' }
     }
   });
 

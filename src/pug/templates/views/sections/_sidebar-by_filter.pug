@@ -7,36 +7,8 @@ aside.main-sidebar.hidden-print
       //- | &nbsp;關鍵字&nbsp;
       .form-inline
         input(type='text', class='form-control', placeholder='輸入關鍵字')
-        //- a.search-question(href='javascript:;')
-        //-   i.icn.icn--circle-question
-        .dropdown.search-question-wrapper
-          a(id='searhQuestion', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', class='search-question')
-            i.icn.icn--circle-question
-          // 關鍵字搜尋說明
-          .dropdown-menu(aria-labelledby='searhQuestion', class='search-question__tip-wrapper')
-            .search-question__tip
-              .title
-                .row1
-                  .icn.icn-circle-question
-                  | 關鍵字搜尋說明
-                .pull-left
-                  span.dt 關鍵字
-                  span.dd 搜尋說明
-                .pull-right
-                  i.icn.icn--cross
-
-              .body
-                dl
-                  -for (var i = 1; i < 10; i++)
-                    dt lorem
-                    dd
-                      .td
-                        a(href='javascript:;') lorem #{i}
-                        |、
-                        a(href='javascript:;') lorem #{i}
-                        |、
-                        a(href='javascript:;') lorem #{i}
-          // 關鍵字搜尋說明
+        include _sidebar__searh-question
+        // 關鍵字搜尋說明
     form.form-horizontal(style='padding: 10px')
       .card.cluster
         .card-title 計畫叢集
@@ -55,14 +27,15 @@ aside.main-sidebar.hidden-print
                       | 複選項目
         .card-footer
           button.btn(type="button" class="btn btn-default") 更多...
-      .card
+      .card#time-range
         .card-title
-          | 依「西元」: 篩選
-          span #
+          label(for="amount") 依「西元」篩選:
+          input(type="text", id="amount", readonly)
         .card-body
-          include _sidebar__input-range
+          #slider-range
+          //- include _sidebar__input-range
         .card-footer
-          button(type='button' class='btn btn-default') 個別年度篩選
+          include _sidebar__time-range
       //- .card
       //-   .card-title 類型
       //-   .card-body

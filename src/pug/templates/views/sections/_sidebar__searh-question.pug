@@ -1,0 +1,31 @@
+// 關鍵字搜尋說明
+.dropdown(class='search-question')
+  a(id='searhQuestion', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', class='search-question-trigger')
+    i.icn.icn--circle-question
+
+  .dropdown-menu(aria-labelledby='searhQuestion', class='search-question__tip-wrapper')
+    .search-question__tip
+      .dropdown-menu__title
+        .row
+          .col-sm-12
+            .pull-left
+              span.icn.icn--circle-question
+              | 關鍵字搜尋說明
+            .pull-right
+              i.icn.icn--cross
+        .row
+          .col-sm-12
+            span.dt 關鍵字
+            span.dd 搜尋說明
+
+      .dropdown-menu__body
+        dl
+          -for (var i = 1; i < 10; i++)
+            dt lorem
+            dd
+              .td
+                a(href='javascript:;') lorem #{i}
+                |、
+                a(href='javascript:;') lorem #{i}
+                |、
+                a(href='javascript:;') lorem #{i}

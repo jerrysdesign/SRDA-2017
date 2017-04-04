@@ -1,0 +1,17 @@
+.dropdown(class='select-time')
+  button(type='button', class='btn btn-default select-time-trigger', id='searhQuestion', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 個別年度篩選
+
+  .dropdown-menu(aria-labelledby='selectTime', class='select-time-wrapper')
+    .dropdown-menu__title
+      .pull-left
+        | 選擇年度 / 期刊 (例: 2000/41，西元 2000 年四期一次)
+      .pull-right
+        i.icn.icn--cross
+    .dropdown-menu__body
+      ul.checkbox
+        -for (var i = 1; i < 20; i++)
+          li
+            label.mr-10
+              input(type="checkbox" id="" value="")
+              | 複選項目
+    .dropdown-menu__footer

@@ -103,52 +103,71 @@
           i
             &:first-of-type
               margin-right:  5px
-.search-question-wrapper
+
+// dropdown
+.sidebar
+  .dropdown
+    .dropdown-menu
+      margin: 0
+      padding: 0
+    .dropdown-menu__title
+      background-color: $color-gray-lighter
+      padding: 10px
+      padding-bottom: 5px
+      overflow: hidden
+    .dropdown-menu__body
+      padding: 10px
+      padding-top: 5px
+
+
+.search-question,
+.select-time
   display: inline-block
-.search-question
+
+// dropdown
+.search-question-trigger
   color: #ddd
   margin-left: 5px
   color: #fff
   cursor: pointer
   &:hover
     color: #fff
-  &__tip-wrapper
-    width: 300px
+
+// dropdown-menu
+.search-question__tip-wrapper
+  width: 300px
+  top: 32px
+  overflow: hidden
+  // tip content
+  .row + .row
+    margin-top: 5px
+.search-question__tip
+  .dd
+    margin-left: 8rem
+  dl
+    margin-bottom: 0
+  dt
+    float: left
+    width: 8rem
+    border-right: 1px solid $color-gray-light
+    font-weight: normal
+  dd
+    padding: 2px 5px
+    margin-left: 8.5rem
+
+.select-time-wrapper
+  width: 480px
+  position: absolute
+  left: 100%
+  top: 0
+  ul,
+  li
     margin: 0
     padding: 0
-    // left: -117px
-    top: 32px
-    overflow: hidden
-
-    // tip content
-    .title
-      background-color: $color-gray-lighter
-      padding: 10px
-      padding-bottom: 5px
-      overflow: hidden
-      .row1
-        padding-bottom: 5px
-      .dt
-      .dd
-        margin-left: 8rem
-    .body
-      padding: 10px
-      padding-top: 5px
-    dl
-      margin-bottom: 0
-    dt,
-    dd
-      padding: 2px 5px
-    dt
-      float: left
-      width: 8rem
-      border-right: 1px solid $color-gray-light
-      font-weight: normal
-
-    dd
-      margin-left: 8.5rem
-      .td
-
+    list-style: none
+  li
+    width: 19%
+    display: inline-block
 
 // 選擇叢集
 .cluster
