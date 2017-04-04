@@ -38,7 +38,7 @@ block contentMain
       .row
         .col-md-12
           .card
-            section.dedaile
+            section.detaile
               .row.dedaile-info.list-side-by-side
                 .col-xs-9
                   dl
@@ -67,7 +67,28 @@ block contentMain
                     -for (var i = 1; i < 5; i++)
                       li
                         a(href='#') 變項 #{i}
+              .row
+                .col-xs-4
+                  | 資料年度(西元):
 
+              .row
+                .col-xs-4
+                  | 次數分配表:
+                  a(href='javascript:;') 全部年度
+                .col-xs-8
+                  | 篩選年度:
+                  span.dropdown
+                    a.dropdown-toggle(data-toggle='dropdown', href='#')
+                      | 選擇資料年度
+                      span.caret
+                    span.dropdown-menu
+                      li
+                        a(href='#dropdown1') 全部年度
+                      li.divider
+                      li
+                        a(href='#dropdown2') 1990
+                      li
+                        a(href='#dropdown2') 1989
 
               .row
                 .col-xs-12.table-responsive
