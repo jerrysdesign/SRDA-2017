@@ -23,16 +23,22 @@ body
   padding: 30px
   transition: all 0.3s ease-in-out
 
-@media (min-width: 768px)
-  .sidebar-collapse .content-wrapper
+.sidebar-collapse
+  .content-wrapper
     margin-left: 0
-
-@media (max-width: 767px)
+.sidebar-open
   .content-wrapper
-      margin-left: 0
-  .sidebar-open .content-wrapper
     transform: translate($sidebar-width, 0)
+// @media (min-width: 768px)
+//   .sidebar-collapse .content-wrapper
+//     margin-left: 0
 
-@media (max-width: 480px)
-  .content-wrapper
-    padding: 10px
+// @media (max-width: 767px)
+//   .content-wrapper
+//       margin-left: 0
+//   .sidebar-open .content-wrapper
+//     transform: translate($sidebar-width, 0)
+
+// @media (max-width: 480px)
+//   .content-wrapper
+//     padding: 10px
