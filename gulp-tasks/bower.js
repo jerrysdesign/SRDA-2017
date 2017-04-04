@@ -12,13 +12,7 @@ gulp.task('moveBower', function(){
     debugging: true,
     overrides: {
       'jquery': { main: 'dist/jquery.min.js' },
-      'zepto': { main: 'zepto.min.js' },
-      'require': { main: 'require.js' },
-      'waypoints': { main: 'lib/jquery.waypoints.min.js' },
-      'js-signals': { main: 'dist/signals.min.js' },
-      'enquire': { main: 'dist/enquire.min.js' },
-      'gsap': { main: 'src/minified/TweenMax.min.js' },
-      'scrollreveal': { main: 'dist/scrollreveal.min.js' },
+      'jquery-ui': { main: 'jquery-ui.min.js' },
       'require': { main: 'require.js' },
       'bootstrap-sass': { main: 'assets/javascripts/bootstrap.min.js' },
     }

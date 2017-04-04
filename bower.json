@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "jquery": "^2.2.1",
+    "jquery-ui": "^1.12.1",
     "zepto": "^1.1.6",
     "waypoints": "^4.0.0",
     "enquire": "^2.1.2",
