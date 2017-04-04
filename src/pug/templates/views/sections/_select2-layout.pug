@@ -1,0 +1,28 @@
+.is-dropdown
+  .input-group
+    .input-group-addon
+      span(class='icn icn--search')
+    .input.form-control
+      span.hida Select
+      .multiSel
+    span(class='icn icn--circle-add addon is-dropdown-trigger')
+
+  .subject
+    .card-title
+      input(type='text', class='col-md-12 form-control', placeholder='輸入主題文字')
+    .card-body.mutliSelect
+      .row
+        -for (var i = 1; i < 99; i++)
+          .col-md-4.checkbox
+            label.mr-10
+              input(type='checkbox' id='' value=i)
+              | 複選項目[#{i}]
+    .subject-footer
+      .row
+        .pull-right
+          a(href='javascript:;', class='check-all')
+            i.icn.icn--circle-check
+            | 選擇全部
+          a(href='javascript:;', class='remove-all')
+            i.icn.icn--circle-cross
+            | 清除全部

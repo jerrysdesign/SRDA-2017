@@ -5,12 +5,17 @@
 .search-bar
   .input-group-addon
     background-color: transparent
+  .form-group
+    margin-bottom: 0
+  & + .form-group
+    margin-bottom: 0
     // padding: 0
     // line-height: 30px
     // height: 30px
   // @extend .form-inline
 .select2-component
   .subject
+    display: none
     width: 700px
     background: #fff
     border: 1px solid $color-gray-light
@@ -18,7 +23,7 @@
     position: absolute
     top: 32px
     left: 15px
-    background: $color-gray-lightest;
+    background: $color-gray-lightest
     .checkbox,
     .checkbox + .checkbox
       margin-top: 5px
@@ -65,3 +70,39 @@
   left: auto
   right: 0
 
+
+// .select2-results-dept-0
+//   float: left
+//   width: 20%
+
+// img.flag
+//   height: 10px
+//   padding-right: 5px
+//   width: 15px
+
+// #e2_2
+//   display: none
+
+// #s2id_e2_2.select2-container-multi
+
+//   .select2-choices
+//     .select2-search-choice
+//       padding: 3px 18px 3px 5px
+// .select2-search-choice-close
+//   left: auto
+//   right: 3px
+
+// .select2-results__option
+//   float: left
+//   width: 32%
+
+
+.is-dropdown
+  // position: absolute
+  // top: 50%
+  // transform: translateY(-50%)
+  span.value
+    display: none
+.multiSel span
+  cursor: pointer
+  display: inline-block

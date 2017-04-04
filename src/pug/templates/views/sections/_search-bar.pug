@@ -22,31 +22,10 @@
         label.control-label 主題搜尋
 
       .form-group.col-sm-8.has-feedback#select2
-        .input-group
-          .input-group-addon
-            span(class="icn icn--search")
-          input.form-control(type='search', placeholder='')
-          span(class="icn icn--circle-add addon")
-        .subject
-          .card-title
-            input(type='text', class='col-md-12 form-control', placeholder='輸入主題文字')
-          .card-body
-            .row
-              -for (var i = 1; i < 99; i++)
-                .col-md-4.checkbox
-                  label.mr-10
-                    input(type="checkbox" id="" value="")
-                    | 複選項目[#{i}]
-
-          .subject-footer
-            .row
-              .pull-right
-                a(href='javascript:;', class='check-all')
-                  i.icn.icn--circle-check
-                  | 選擇全部
-                a(href='javascript:;', class='remove-all')
-                  i.icn.icn--circle-cross
-                  | 清除全部
+        //- latout
+        include _select2-layout
+        //- puglin
+        //- include _select2
     .form-group.col-md-2
       .row
         button.btn.btn-primary.icon-btn(type='button') 查詢

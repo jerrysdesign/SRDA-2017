@@ -1,0 +1,50 @@
+script(type="text/javascript").
+  $(".is-dropdown .is-dropdown-trigger").on('click', function() {
+    $(".is-dropdown .subject").slideToggle('fast');
+  });
+  //- $(".is-dropdown .subject a").on('click', function() {
+  //-   $(".is-dropdown .subject").hide();
+  //- });
+
+  function getSelectedValue(id) {
+    return $("#" + id).find(".input-group a span.value").html();
+  }
+
+  //- $(document).bind('click', function(e) {
+  //-   var $clicked = $(e.target);
+  //-   if (!$clicked.parents().hasClass(".is-dropdown")) $(".is-dropdown .subject").hide();
+  //- });
+
+  $('.mutliSelect input[type="checkbox"]').on('click', function() {
+
+    var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+      title = $(this).val() + ",";
+
+    if ($(this).is(':checked')) {
+      var html = '<span title="' + title + '">' + title + '</span>';
+      $('.multiSel').append(html);
+      $(".hida").hide();
+    } else {
+      $('span[title="' + title + '"]').remove();
+      var ret = $(".hida");
+      $('.is-dropdown .input-group .form-control').append(ret);
+      $(".hida").show();
+    }
+  });
+
+  $('.check-all').on('click',function(){
+    var checked = false;
+    if(checked == false) {
+      $('.mutliSelect :checkbox').prop('checked', true);
+      checked = true;
+    }
+  });
+
+  $('.remove-all').on('click',function(){
+    var checked = true;
+    if(checked == true) {
+      $('.mutliSelect :checkbox').prop('checked', false);
+      checked = false;
+    }
+  });
+
