@@ -1,0 +1,60 @@
+.card
+  .search-controls
+    .text-muted.pull-left
+      form.form-inline
+        form-group
+          label 每頁顯示
+          input(type='text')
+          span 筆
+        form-group
+          label 共
+          span #
+          span 筆
+    .clearfix
+
+  .search-results
+    .table-responsive.search-messages
+      table.table.table-striped.table-hover
+        thead
+          tr
+            th
+              .animated-checkbox
+                label
+                  input(type="checkbox")
+                  span.label-text  全選
+            th 變項名稱
+            th 變項說明
+            th 選項
+            th 類型
+            th 西元年
+        tbody
+          -for (var i = 1; i <10; i++)
+            tr
+              td
+                .animated-checkbox
+                  label
+                    input(type="checkbox")
+              td
+                a(href='dedail-view') 變項名稱 #{i}
+              td.search-subject
+                | 變項說明 #{i}
+              td
+                ol
+                  li 選項 #{i}
+                  li 選項 #{i}
+                  li 選項 #{i}
+              td
+                | 類型 #{i}
+              td ... #{i}
+
+    .text-muted.pull-left
+      form.form-inline
+        form-group
+          label 每頁顯示
+          input(type='text')
+          span 筆
+        form-group
+          label 共
+          span #
+          span 筆
+    .clearfix

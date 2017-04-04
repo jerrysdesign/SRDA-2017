@@ -22,10 +22,8 @@
         label.control-label 主題搜尋
 
       .form-group.col-sm-8.has-feedback#select2
-        //- latout
-        include _select2-layout
-        //- puglin
-        //- include _select2
+        include _search-select-to
+
     .form-group.col-md-2
       .row
         button.btn.btn-primary.icon-btn(type='button') 查詢
@@ -56,18 +54,6 @@
                   td.text-center
                     a(href='javascript:;')
                       i.icn.icn--cross
-      //- <div class="dropdown">
-      //-   <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      //-     Dropdown trigger
-      //-     <span class="caret"></span>
-      //-   </button>
-      //-   <ul class="dropdown-menu" aria-labelledby="dLabel">
-      //-     ...
-      //-   </ul>
-      //- </div>
-      //- i.icn.icn-lg.icn--shopping-cart
-      //- span #
-
 
     .form-group
       span 已選變項
