@@ -106,9 +106,12 @@
   // transform: translateY(-50%)
   span.value
     display: none
-.multi-select span
-  cursor: pointer
-  display: inline-block
+.multi-select
+  max-height: 20px
+  overflow: hidden
+  span
+    cursor: pointer
+    display: inline-block
 
 .select-label
   display: inline-block
