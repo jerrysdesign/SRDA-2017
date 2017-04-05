@@ -20,10 +20,10 @@ script(type="text/javascript").
   $('.mutliSelect input[type="checkbox"]').on('click', function() {
 
     var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
-      title = $(this).val() + ",";
+      title = $(this).val();
 
+    var html = '<div class="select-label"><span title="' + title + '">' + title + '</span><span class="icn icn--cross"></span></div>';
     if ($(this).is(':checked')) {
-      var html = '<span title="' + title + '">' + title + '</span>';
       $('.multiSel').append(html);
       $(".hida").hide();
     } else {
@@ -37,7 +37,7 @@ script(type="text/javascript").
   $('.check-all').on('click',function(){
     var checked = false;
     if(checked == false) {
-      $('.mutliSelect :checkbox').prop('checked', true);
+      $('.multi-select :checkbox').prop('checked', true);
       checked = true;
     }
   });

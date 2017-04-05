@@ -1,6 +1,9 @@
 // Componant: Search Subject 主題搜索
 #select2
   position: relative
+  .input-group
+    height: 30px
+    overflow: hidden
 
 .search-bar
   .input-group-addon
@@ -103,6 +106,19 @@
   // transform: translateY(-50%)
   span.value
     display: none
-.multiSel span
+.multi-select span
   cursor: pointer
   display: inline-block
+
+.select-label
+  display: inline-block
+  cursor: pointer
+  padding-right: 5px
+  padding-left: 5px
+  background: $color-gray-lightest
+  border-radius: 3px
+  .icn--cross
+    font-size: 12px
+    padding-left: 5px
+.select-label + .select-label
+  margin-left: 10px
