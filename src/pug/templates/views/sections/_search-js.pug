@@ -1,5 +1,5 @@
 script(type="text/javascript").
-  $(".is-dropdown .is-dropdown-trigger").on('click', function() {
+  $("#is-dropdown-trigger").on('click', function() {
     $(".is-dropdown .subject").slideToggle('fast');
   });
   //- $(".is-dropdown .subject a").on('click', function() {
@@ -10,10 +10,12 @@ script(type="text/javascript").
     return $("#" + id).find(".input-group a span.value").html();
   }
 
-  //- $(document).bind('click', function(e) {
-  //-   var $clicked = $(e.target);
-  //-   if (!$clicked.parents().hasClass(".is-dropdown")) $(".is-dropdown .subject").hide();
-  //- });
+  $(document).bind('click', function(e) {
+    var $clicked = $(e.target);
+    if (!$clicked.parents().hasClass("is-dropdown")) {
+      $(".is-dropdown .subject").hide();
+    }
+  });
 
   $('.mutliSelect input[type="checkbox"]').on('click', function() {
 
