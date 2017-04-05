@@ -1,4 +1,12 @@
 script(type="text/javascript").
+  var hidePlaceHolder = function () {
+    if (!$('.select-label').length) {
+      $('.hida').show();
+    } else {
+      $('.hida').hide();
+    }
+  }
+
   $("#is-dropdown-trigger").on('click', function() {
     $(".is-dropdown .subject").slideToggle('fast');
   });
@@ -12,41 +20,66 @@ script(type="text/javascript").
 
   $(document).bind('click', function(e) {
     var $clicked = $(e.target);
-    if (!$clicked.parents().hasClass("is-dropdown")) {
+    if (!$clicked.parents().hasClass("is-dropdown") && !$clicked.parents().hasClass("select-label")) {
       $(".is-dropdown .subject").hide();
     }
   });
 
   $('.multi-check input[type="checkbox"]').on('click', function() {
 
-    var title = $(this).closest('.multi-check').find('input[type="checkbox"]').val(),
-      title = $(this).val();
+    var title = $(this).val();
 
     var html = '<div class="select-label"><span title="' + title + '">' + title + '</span><span class="icn icn--cross"></span></div>';
+
     if ($(this).is(':checked')) {
       $('.multi-select').append(html);
-      $(".hida").hide();
     } else {
-      $('span[title="' + title + '"]').remove();
-      var ret = $(".hida");
-      $('.is-dropdown .input-group .form-control').append(ret);
-      $(".hida").show();
+      var selectLabel = $('span[title="' + title + '"]').parent().remove();
     }
+
+    hidePlaceHolder()
+
+    $('.select-label').on('click', function() {
+      var title = $(this).find('span').eq(0).attr('title')
+      $('.multi-check input[type="checkbox"][value="'+ title +'"]').removeAttr('checked')
+
+      $(this).remove()
+      hidePlaceHolder()
+    })
   });
 
-  $('.check-all').on('click',function(){
+  $('#srda-search-select-all').on('click', function() {
+    $('.hida').hide();
     var checked = false;
-    if(checked == false) {
-      $('.multi-select :checkbox').prop('checked', true);
+    //- title = $(this).closest('.multi-check').find('input[type="checkbox"]').val(),
+    var el = $('.card-body.multi-check input[type="checkbox"]')
+    el.each(function (idx) {
+      var text = el.eq(idx).val();
+      var html = '<div class="select-label"><span title="' + text + '">' + text + '</span><span class="icn icn--cross"></span></div>';
+      $('.multi-select').append(html);
+    })
+    if(checked === false) {
+      $('.multi-check :checkbox').prop('checked', true);
       checked = true;
     }
+
+    $('.select-label').on('click', function() {
+      var title = $(this).find('span').eq(0).attr('title')
+      $('.multi-check input[type="checkbox"][value="'+ title +'"]').removeAttr('checked')
+
+      $(this).remove()
+      hidePlaceHolder()
+    })
   });
 
-  $('.remove-all').on('click',function(){
+  $('#srda-search-select-inverse').on('click', function() {
+    $('.hida').show();
+    $('.multi-select').text('');
     var checked = true;
-    if(checked == true) {
-      $('.mutli-check :checkbox').prop('checked', false);
+    if(checked === true) {
+      $('.multi-check :checkbox').prop('checked', false);
       checked = false;
     }
   });
+
 

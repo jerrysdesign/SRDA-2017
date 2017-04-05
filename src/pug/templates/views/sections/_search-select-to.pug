@@ -16,13 +16,13 @@
           .col-md-4.checkbox
             label.mr-10
               input(type='checkbox' id='' value=i)
-              | 複選項目[#{i}]
+              | #{i}
     .subject-footer
       .row
         .pull-right
-          a(href='javascript:;', class='check-all')
+          a(href='javascript:;', class='check-all' id='srda-search-select-all')
             i.icn.icn--circle-check
             | 選擇全部
-          a(href='javascript:;', class='remove-all')
+          a(href='javascript:;', class='remove-all' id='srda-search-select-inverse')
             i.icn.icn--circle-cross
             | 清除全部
