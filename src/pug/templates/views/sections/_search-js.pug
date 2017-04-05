@@ -17,14 +17,14 @@ script(type="text/javascript").
     }
   });
 
-  $('.mutliSelect input[type="checkbox"]').on('click', function() {
+  $('.multi-check input[type="checkbox"]').on('click', function() {
 
-    var title = $(this).closest('.mutliSelect').find('input[type="checkbox"]').val(),
+    var title = $(this).closest('.multi-check').find('input[type="checkbox"]').val(),
       title = $(this).val();
 
     var html = '<div class="select-label"><span title="' + title + '">' + title + '</span><span class="icn icn--cross"></span></div>';
     if ($(this).is(':checked')) {
-      $('.multiSel').append(html);
+      $('.multi-select').append(html);
       $(".hida").hide();
     } else {
       $('span[title="' + title + '"]').remove();
@@ -45,7 +45,7 @@ script(type="text/javascript").
   $('.remove-all').on('click',function(){
     var checked = true;
     if(checked == true) {
-      $('.mutliSelect :checkbox').prop('checked', false);
+      $('.mutli-check :checkbox').prop('checked', false);
       checked = false;
     }
   });
