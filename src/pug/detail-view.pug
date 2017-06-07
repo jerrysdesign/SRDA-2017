@@ -61,6 +61,7 @@ block contentMain
                       a(href='#') 主題
                     dt 資料年度(西元)
                     dd ...
+
                 .col-xs-3
                   h3 相關變項：
                   ul
@@ -68,8 +69,13 @@ block contentMain
                       li
                         a(href='#') 變項 #{i}
               .row
-                .col-xs-4
+                .col-xs-2
                   | 資料年度(西元):
+                .col-xs-5
+                  .timeline
+                    .timeline-items(data-year-start='1990', data-year-end='1995')
+                      - for (var x = 0; x < 30; x++)
+                        .timeline-item
 
               .row
                 .col-xs-4
@@ -127,3 +133,4 @@ block contentMain
 block specific-js
   script(type="text/javascript").
     $('body').removeClass("sidebar-mini").addClass("sidebar-collapse");
+  include templates/views/sections/_timeline-js

@@ -1,0 +1,18 @@
+script(type="text/javascript").
+  $(function() {
+
+    var HEAD = 1985
+    var timeLineEl = $('.timeline');
+    timeLineEl.each(function (k) {
+      var child = $(this).children('.timeline-items');
+      var start = child.data('year-start');
+      var end = child.data('year-end');
+
+      var init = start - HEAD;
+      var final = end - HEAD;
+      for (var idx = init;idx <= final;idx++) {
+        $(this).find('.timeline-item').eq(idx).addClass('current')
+      }
+    });
+
+  } );
