@@ -40,7 +40,7 @@ block contentMain
           .card
             section.detaile
               .row.dedaile-info.list-side-by-side
-                .col-xs-9
+                .col-xs-8
                   dl
                     dt 變項名稱：
                     dd 變項名稱假文字
@@ -59,23 +59,19 @@ block contentMain
                       a(href='#') 主題
                       |、
                       a(href='#') 主題
-                    dt 資料年度(西元)
-                    dd ...
+                    dt 資料年度(西元):
+                    dd
+                      .timeline(style='max-width: 400px;')
+                        .timeline-items(data-year-start='1990', data-year-end='1995')
+                          - for (var x = 0; x < 30; x++)
+                            .timeline-item
 
-                .col-xs-3
+                .col-xs-4
                   h3 相關變項：
                   ul
                     -for (var i = 1; i < 5; i++)
                       li
                         a(href='#') 變項 #{i}
-              .row
-                .col-xs-2
-                  | 資料年度(西元):
-                .col-xs-5
-                  .timeline
-                    .timeline-items(data-year-start='1990', data-year-end='1995')
-                      - for (var x = 0; x < 30; x++)
-                        .timeline-item
 
               .row
                 .col-xs-4
