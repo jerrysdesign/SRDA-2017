@@ -19,8 +19,9 @@ $icn-pencil: "\E00D";
 $icn-plus: "\E00E";
 $icn-search: "\E00F";
 $icn-shopping-cart: "\E010";
-$icn-user: "\E011";
-$icn-wrench: "\E012";
+$icn-sidebar-toggle: "\E011";
+$icn-user: "\E012";
+$icn-wrench: "\E013";
 
 
 
@@ -47,8 +48,9 @@ $icons: (
   plus: "\E00E",
   search: "\E00F",
   shopping-cart: "\E010",
-  user: "\E011",
-  wrench: "\E012",
+  sidebar-toggle: "\E011",
+  user: "\E012",
+  wrench: "\E013",
 );
 
 
@@ -145,6 +147,9 @@ $icons: (
 }
 .icn--shopping-cart {
   @include icn(shopping-cart);
+}
+.icn--sidebar-toggle {
+  @include icn(sidebar-toggle);
 }
 .icn--user {
   @include icn(user);
